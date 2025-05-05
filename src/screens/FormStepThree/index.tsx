@@ -18,6 +18,7 @@ export function FormStepThree() {
 
   function handleNextStep(data: AccountProps) {
     console.log(data)
+    navigate('finish')
   }
 
   function validationPasswordConfirmation(passwordConfirmation: string) {

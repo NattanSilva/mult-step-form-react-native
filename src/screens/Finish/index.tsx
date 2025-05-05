@@ -1,9 +1,10 @@
 import React from 'react'
+import { useFormContext } from 'react-hook-form'
 import { Text, View } from 'react-native'
-import { useAccountForm } from '../../hooks/useAccountForm'
 
 export function Finish() {
-  const { accountFormData } = useAccountForm()
+  const { getValues } = useFormContext<AccountProps>()
+  const accountFormData = getValues()
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Nome: {accountFormData.name}</Text>
